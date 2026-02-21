@@ -1,0 +1,20 @@
+current directory: /Users/aaronnorth/.openclaw/workspace/chat_app/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+/Users/aaronnorth/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+checking for rb_io_mode_t in ruby/io.h... no
+creating Makefile
+
+current directory: /Users/aaronnorth/.openclaw/workspace/chat_app/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260220-41573-xujtrm sitelibdir\=./.gem.20260220-41573-xujtrm clean
+
+current directory: /Users/aaronnorth/.openclaw/workspace/chat_app/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260220-41573-xujtrm sitelibdir\=./.gem.20260220-41573-xujtrm
+compiling stringio.c
+linking shared-object stringio.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/aaronnorth/.openclaw/workspace/chat_app/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260220-41573-xujtrm sitelibdir\=./.gem.20260220-41573-xujtrm install
+/usr/bin/install -c -m 0755 stringio.bundle ./.gem.20260220-41573-xujtrm
+
+current directory: /Users/aaronnorth/.openclaw/workspace/chat_app/vendor/bundle/ruby/3.2.0/gems/stringio-3.2.0/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20260220-41573-xujtrm sitelibdir\=./.gem.20260220-41573-xujtrm clean

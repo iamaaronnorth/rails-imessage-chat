@@ -1,0 +1,16 @@
+<%= turbo_stream.append "messages_list", partial: "messages/message", locals: { message: @message } %>
+<%= turbo_stream.replace "message_form", partial: "chats/message_form", locals: { message: Message.new } %>
+
+<script>
+  // Scroll to bottom of messages container
+  const messagesContainer = document.getElementById('messages');
+  if (messagesContainer) {
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+  
+  // Clear the form
+  const form = document.getElementById('new_message_form');
+  if (form) {
+    form.reset();
+  }
+</script>

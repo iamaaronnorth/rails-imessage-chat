@@ -1,0 +1,8 @@
+<div class="reactions">
+  <% message.grouped_reactions.each do |emoji, count| %>
+    <span class="reaction-badge">
+      <span class="reaction-emoji"><%= emoji %></span>
+      <span class="reaction-count"><%= count %></span>
+    </span>
+  <% end %>
+</div>

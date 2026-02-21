@@ -1,0 +1,326 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+/* Chat App Styles - iMessage inspired */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.chat-container {
+  display: flex;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 300px;
+  background-color: #f6f7f9;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sidebar-header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.chat-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s;
+}
+
+.chat-item:hover {
+  background-color: #e5e7eb;
+}
+
+.chat-item.active {
+  background-color: #3b82f6;
+}
+
+.chat-item.active a {
+  color: white;
+}
+
+.chat-item a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.chat-header {
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #ffffff;
+}
+
+.chat-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Messages Container */
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.message {
+  margin-bottom: 20px;
+  max-width: 70%;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.sender-name {
+  font-weight: 600;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.timestamp {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.message-content {
+  background-color: #e5e7eb;
+  padding: 12px 16px;
+  border-radius: 18px;
+  border-bottom-left-radius: 4px;
+  color: #111827;
+  line-height: 1.5;
+}
+
+.message:nth-child(even) .message-content {
+  background-color: #3b82f6;
+  color: white;
+  border-radius: 18px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 18px;
+  margin-left: auto;
+}
+
+.message:nth-child(even) {
+  margin-left: auto;
+}
+
+/* Message Actions */
+.message-actions {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.reaction-buttons {
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.message:hover .reaction-buttons {
+  opacity: 1;
+}
+
+.reaction-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.reaction-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.reactions {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.reaction-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #f3f4f6;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.reaction-emoji {
+  font-size: 14px;
+}
+
+.reaction-count {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Message Form */
+.message-form-container {
+  padding: 20px;
+  border-top: 1px solid #e5e7eb;
+  background-color: #ffffff;
+}
+
+.message-form {
+  width: 100%;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.sender-input {
+  width: 120px;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.sender-input:focus {
+  border-color: #3b82f6;
+}
+
+.message-input {
+  flex: 1;
+  padding: 8px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 20px;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+  max-height: 100px;
+  min-height: 40px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.message-input:focus {
+  border-color: #3b82f6;
+}
+
+.send-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.send-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6b7280;
+  text-align: center;
+}
+
+.empty-state p {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 250px;
+  }
+  
+  .message {
+    max-width: 85%;
+  }
+  
+  .input-group {
+    flex-direction: column;
+  }
+  
+  .sender-input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,31 @@
+<div class="message" id="message_<%= message.id %>">
+  <div class="message-header">
+    <span class="sender-name"><%= message.sender_name %></span>
+    <span class="timestamp"><%= message.created_at.strftime("%I:%M %p") %></span>
+  </div>
+  
+  <div class="message-content">
+    <%= simple_format(message.content) %>
+  </div>
+  
+  <div class="message-actions">
+    <div class="reaction-buttons">
+      <%= link_to "👍", message_reactions_path(message), method: :post, 
+          params: { reaction: { emoji: "👍", sender_name: "Anonymous" } },
+          remote: true, class: "reaction-btn" %>
+      <%= link_to "❤️", message_reactions_path(message), method: :post, 
+          params: { reaction: { emoji: "❤️", sender_name: "Anonymous" } },
+          remote: true, class: "reaction-btn" %>
+      <%= link_to "😂", message_reactions_path(message), method: :post, 
+          params: { reaction: { emoji: "😂", sender_name: "Anonymous" } },
+          remote: true, class: "reaction-btn" %>
+      <%= link_to "😮", message_reactions_path(message), method: :post, 
+          params: { reaction: { emoji: "😮", sender_name: "Anonymous" } },
+          remote: true, class: "reaction-btn" %>
+    </div>
+    
+    <div id="message_<%= message.id %>_reactions">
+      <%= render "reactions", message: message %>
+    </div>
+  </div>
+</div>

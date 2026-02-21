@@ -1,0 +1,9 @@
+<%= turbo_frame_tag "message_form" do %>
+  <%= form_with model: [@chat, message], local: false, id: "new_message_form", class: "message-form" do |f| %>
+    <div class="input-group">
+      <%= f.text_field :sender_name, placeholder: "Your name", required: true, class: "sender-input" %>
+      <%= f.text_area :content, placeholder: "Type a message...", required: true, class: "message-input", rows: 1 %>
+      <%= f.submit "Send", class: "send-btn" %>
+    </div>
+  <% end %>
+<% end %>

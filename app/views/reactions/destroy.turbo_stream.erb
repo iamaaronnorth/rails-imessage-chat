@@ -1,0 +1,1 @@
+<%= turbo_stream.replace "message_#{@message.id}_reactions", partial: "messages/reactions", locals: { message: @message } %>

@@ -1,0 +1,29 @@
+current directory: /Users/aaronnorth/.openclaw/workspace/chat_app/vendor/bundle/ruby/3.2.0/gems/psych-5.3.1/ext/psych
+/Users/aaronnorth/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/aaronnorth/.openclaw/workspace/chat_app/vendor/bundle/ruby/3.2.0/gems/psych-5.3.1/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20260220-41573-cbwr4w sitelibdir\=./.gem.20260220-41573-cbwr4w clean
+cd libyaml && /Library/Developer/CommandLineTools/usr/bin/make clean
+/bin/sh: line 0: cd: libyaml: No such file or directory
+make: [clean-so] Error 1 (ignored)
+
+current directory: /Users/aaronnorth/.openclaw/workspace/chat_app/vendor/bundle/ruby/3.2.0/gems/psych-5.3.1/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20260220-41573-cbwr4w sitelibdir\=./.gem.20260220-41573-cbwr4w
+compiling psych.c
+compiling psych_emitter.c
+compiling psych_parser.c
+compiling psych_to_ruby.c
+compiling psych_yaml_tree.c
+linking shared-object psych.bundle
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/aaronnorth/.openclaw/workspace/chat_app/vendor/bundle/ruby/3.2.0/gems/psych-5.3.1/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20260220-41573-cbwr4w sitelibdir\=./.gem.20260220-41573-cbwr4w install
+/usr/bin/install -c -m 0755 psych.bundle ./.gem.20260220-41573-cbwr4w
+
+current directory: /Users/aaronnorth/.openclaw/workspace/chat_app/vendor/bundle/ruby/3.2.0/gems/psych-5.3.1/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20260220-41573-cbwr4w sitelibdir\=./.gem.20260220-41573-cbwr4w clean
+cd libyaml && /Library/Developer/CommandLineTools/usr/bin/make clean
+/bin/sh: line 0: cd: libyaml: No such file or directory
+make: [clean-so] Error 1 (ignored)
